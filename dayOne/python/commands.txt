@@ -1,0 +1,7 @@
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+
+javac -cp "junit-platform-console-standalone-1.11.0.jar:out" -d out CalculatorTest.java Calculator.java
+java -cp "junit-platform-console-standalone-1.11.0.jar:out" org.junit.platform.console.ConsoleLauncher --scan-class-path
