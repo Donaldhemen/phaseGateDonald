@@ -15,7 +15,7 @@ for(let count = 1; count <= 100; count++){
     }
     else{
         if(count >= 10){
-            reversed = ((count % 10) * 10) + (count/10);
+            reversed = ((count % 10) * 10) + Math.floor(count/10);
             console.log(reversed+" ");
         }
         else{

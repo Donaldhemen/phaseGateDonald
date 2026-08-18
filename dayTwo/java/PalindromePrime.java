@@ -1,4 +1,4 @@
-public class Palindrome{
+public class PalindromePrime{
     public static void main(String[] args){
         
     }
@@ -30,6 +30,9 @@ public class Palindrome{
             if(checker == 1){
                 return true;
             }
+        }
+        public static boolean isPalindromeAndPrime(int number){
+            
         }
     }
 }
