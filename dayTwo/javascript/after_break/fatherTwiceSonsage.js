@@ -10,7 +10,7 @@ function isDoubleSonsAge(numberOne, numberTwo){
         console.log("The father will be twice his son's age in "+yearToDouble+" years time");
     }
 }
-isDoubleSonsAge()
+isDoubleSonsAge();
 const fathersAge = 38;
 const sonsAge = 18;
 isDoubleSonsAge(fathersAge, sonsAge);
