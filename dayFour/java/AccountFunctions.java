@@ -20,6 +20,10 @@ public class AccountFunctions{
         }
         return balance;
     }
+    public static double showTransactions(double amount, int balance){
+        double transaction = deposit(amount, balance);
+        
+    }
     
     
 }
