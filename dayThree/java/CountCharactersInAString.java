@@ -14,7 +14,7 @@ public class CountCharactersInAString{
                     counter++;
                     if(counter >= 2){
                         multipleOccurance++;
-                    }
+                    }  
                 }
             }
         }
