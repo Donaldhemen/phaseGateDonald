@@ -68,15 +68,15 @@ public class Functions{
         return reversed;
     }
     
-//    public static int countOccurencesInAString(String word, char letter){
-//        int counter = 0;
-//        for(int count = 0; count < word.length; count++){
-//            if(charAt(word) == letter){
-//                counter++;
-//            }
-//        }
-//        return counter;
-//    }
+    public static int countOccurencesInAString(String word, char letter){
+        int counter = 0;
+        for(int count = 0; count < word.length; count++){
+            if(word.charAt(count) == letter){
+                counter++;
+            }
+        }
+        return counter;
+    }
     
     public static void main(String[] args){
         int additionResult = addTwoNumbers(4, 5);
