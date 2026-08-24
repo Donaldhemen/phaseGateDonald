@@ -1,14 +1,15 @@
 function addElementsInInnerArrays(array){
-        
-    let sumArray = [array.length];
+    let sum = 0
+    let sumArray = [];
     
    
     for (let column = 0; column < array.length; column++){
         let count = 0;
         for (let row = 0; row < array.length; row++){
-            sumArray[count] += array[row][column];
-            count++;
+            sum += array[column][row]
         }
+        sumArray.push(sum);
+        sum = 0
     }
     return sumArray;
 }
