@@ -24,7 +24,6 @@ public class ParkingLot {
             }
         }
 
-        // No space available
         return false;
     }
 
