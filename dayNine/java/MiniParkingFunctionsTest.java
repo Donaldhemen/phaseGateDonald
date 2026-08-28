@@ -6,12 +6,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class MiniParkingFunctionsTest {
 
 
-    @BeforeEach
-    void setUp() {
-
-        
-        MiniParkingFunctions.resetParkingLot();
-    }
+//    @BeforeEach
+//    public void setUp() {
+//
+//        
+//        MiniParkingFunctions.resetParkingLot();
+//    }
 
 
     @Test
@@ -21,8 +21,7 @@ class MiniParkingFunctionsTest {
         int slot = 1;
 
         //When
-        boolean actualAnswer =
-                MiniParkingFunctions.isSlotEmpty(slot);
+        boolean actualAnswer = MiniParkingFunctions.isSlotEmpty(slot);
 
         boolean expectedAnswer = true;
 
@@ -40,8 +39,7 @@ class MiniParkingFunctionsTest {
         MiniParkingFunctions.chooseSlot(slot);
 
         //When
-        boolean actualAnswer =
-                MiniParkingFunctions.isSlotEmpty(slot);
+        boolean actualAnswer = MiniParkingFunctions.isSlotEmpty(slot);
 
         boolean expectedAnswer = false;
 
@@ -57,8 +55,7 @@ class MiniParkingFunctionsTest {
         int slot = 5;
 
         //When
-        boolean actualAnswer =
-                MiniParkingFunctions.chooseSlot(slot);
+        boolean actualAnswer = MiniParkingFunctions.chooseSlot(slot);
 
         boolean expectedAnswer = true;
 
@@ -76,8 +73,7 @@ class MiniParkingFunctionsTest {
         MiniParkingFunctions.chooseSlot(slot);
 
         //When
-        boolean actualAnswer =
-                MiniParkingFunctions.chooseSlot(slot);
+        boolean actualAnswer = MiniParkingFunctions.chooseSlot(slot);
 
         boolean expectedAnswer = false;
 
@@ -97,8 +93,7 @@ class MiniParkingFunctionsTest {
         //When
         MiniParkingFunctions.leaveSlot(slot);
 
-        boolean actualAnswer =
-                MiniParkingFunctions.isSlotEmpty(slot);
+        boolean actualAnswer = MiniParkingFunctions.isSlotEmpty(slot);
 
         boolean expectedAnswer = true;
 
@@ -114,8 +109,7 @@ class MiniParkingFunctionsTest {
         int slot = 3;
 
         //When
-        boolean actualAnswer =
-                MiniParkingFunctions.leaveSlot(slot);
+        boolean actualAnswer = MiniParkingFunctions.leaveSlot(slot);
 
         boolean expectedAnswer = false;
 
@@ -132,8 +126,7 @@ class MiniParkingFunctionsTest {
         MiniParkingFunctions.chooseSlot(2);
 
         //When
-        int actualAnswer =
-                MiniParkingFunctions.parkNext();
+        int actualAnswer = MiniParkingFunctions.parkNext();
 
         int expectedAnswer = 3;
 
@@ -201,8 +194,7 @@ class MiniParkingFunctionsTest {
         MiniParkingFunctions.chooseSlot(1);
 
         //When
-        int actualAnswer =
-                MiniParkingFunctions.availableSpaces();
+        int actualAnswer = MiniParkingFunctions.availableSpaces();
 
         int expectedAnswer = 19;
 
@@ -220,8 +212,7 @@ class MiniParkingFunctionsTest {
         }
 
         //When
-        int actualAnswer =
-                MiniParkingFunctions.filledSpaces();
+        int actualAnswer = MiniParkingFunctions.filledSpaces();
 
         int expectedAnswer = 20;
 
@@ -239,8 +230,7 @@ class MiniParkingFunctionsTest {
         }
 
         //When
-        int actualAnswer =
-                MiniParkingFunctions.parkNext();
+        int actualAnswer = MiniParkingFunctions.parkNext();
 
         int expectedAnswer = -1;
 
@@ -256,8 +246,7 @@ class MiniParkingFunctionsTest {
         int slot = 0;
 
         //When
-        boolean actualAnswer =
-                MiniParkingFunctions.chooseSlot(slot);
+        boolean actualAnswer = MiniParkingFunctions.chooseSlot(slot);
 
         boolean expectedAnswer = false;
 
@@ -273,8 +262,7 @@ class MiniParkingFunctionsTest {
         int slot = 21;
 
         //When
-        boolean actualAnswer =
-                MiniParkingFunctions.chooseSlot(slot);
+        boolean actualAnswer = MiniParkingFunctions.chooseSlot(slot);
 
         boolean expectedAnswer = false;
 

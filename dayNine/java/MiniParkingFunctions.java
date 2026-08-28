@@ -123,18 +123,12 @@ public class MiniParkingFunctions {
 
         for (int index = 0; index < 20; index++) {
 
-            System.out.println(
-                "Slot " + (index + 1) + ": " + slots[index]
-            );
+            System.out.println("Slot " + (index + 1) + ": " + slots[index]);
         }
 
-        System.out.println(
-            "Available spaces: " + availableSpaces()
-        );
+        System.out.println("Available spaces: " + availableSpaces());
 
-        System.out.println(
-            "Filled spaces: " + filledSpaces()
-        );
+        System.out.println("Filled spaces: " + filledSpaces());
 
         System.out.println("==========================");
     }
