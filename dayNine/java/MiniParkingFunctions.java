@@ -76,7 +76,7 @@ public class MiniParkingFunctions {
             return false;
         }
 
-        if (slots[index] == 1) {
+        if(slots[index] == 1) {
 
             slots[index] = 0;
 
@@ -91,7 +91,7 @@ public class MiniParkingFunctions {
 
         int available = 0;
 
-        for (int index = 0; index < 20; index++) {
+        for(int index = 0; index < 20; index++) {
 
             if (slots[index] == 0) {
                 available++;

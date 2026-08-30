@@ -6,18 +6,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class MiniParkingFunctionsTest {
 
 
-//    @BeforeEach
-//    public void setUp() {
-//
-//        
-//        MiniParkingFunctions.resetParkingLot();
-//    }
-
-
     @Test
-    public void TestThatWhenICheckASlotItReturnsTrueIfEmpty() {
+    public void testThatWhenICheckASlotItReturnsTrueIfEmpty() {
 
         //Given
+        MiniParkingFunctions.resetParkingLot();
+        
         int slot = 1;
 
         //When
@@ -31,9 +25,11 @@ class MiniParkingFunctionsTest {
 
 
     @Test
-    public void TestThatWhenICheckASlotItReturnsFalseIfItsFilledUp() {
+    public void testThatWhenICheckASlotItReturnsFalseIfItsFilledUp() {
 
         //Given
+        MiniParkingFunctions.resetParkingLot();
+        
         int slot = 1;
 
         MiniParkingFunctions.chooseSlot(slot);
@@ -49,9 +45,11 @@ class MiniParkingFunctionsTest {
 
 
     @Test
-    public void TestThatWhenIChooseAnEmptySlotTheCarIsParked() {
+    public void testThatWhenIChooseAnEmptySlotTheCarIsParked() {
 
         //Given
+        MiniParkingFunctions.resetParkingLot();
+        
         int slot = 5;
 
         //When
@@ -65,9 +63,11 @@ class MiniParkingFunctionsTest {
 
 
     @Test
-    public void TestThatWhenIChooseAFilledSlotItReturnsFalse() {
+    public void testThatWhenIChooseAFilledSlotItReturnsFalse() {
 
         //Given
+        MiniParkingFunctions.resetParkingLot();
+        
         int slot = 5;
 
         MiniParkingFunctions.chooseSlot(slot);
@@ -83,9 +83,11 @@ class MiniParkingFunctionsTest {
 
 
     @Test
-    public void TestThatWhenICarLeavesASlotItBecomesEmpty() {
+    public void testThatWhenACarLeavesASlotItBecomesEmpty() {
 
         //Given
+        MiniParkingFunctions.resetParkingLot();
+        
         int slot = 3;
 
         MiniParkingFunctions.chooseSlot(slot);
@@ -103,9 +105,11 @@ class MiniParkingFunctionsTest {
 
 
     @Test
-    public void TestThatWhenICarLeavesAnEmptySlotItReturnsFalse() {
+    public void testThatWhenICarLeavesAnEmptySlotItReturnsFalse() {
 
         //Given
+        MiniParkingFunctions.resetParkingLot();
+        
         int slot = 3;
 
         //When
@@ -119,9 +123,11 @@ class MiniParkingFunctionsTest {
 
 
     @Test
-    public void TestThatParkNextUsesTheFirstAvailableSlot() {
+    public void testThatParkNextUsesTheFirstAvailableSlot() {
 
         //Given
+        MiniParkingFunctions.resetParkingLot();
+        
         MiniParkingFunctions.chooseSlot(1);
         MiniParkingFunctions.chooseSlot(2);
 
@@ -136,9 +142,11 @@ class MiniParkingFunctionsTest {
 
 
     @Test
-    public void TestThatParkNextUsesTheFirstEmptySlotAfterACarLeaves() {
+    public void testThatParkNextUsesTheFirstEmptySlotAfterACarLeaves() {
 
         //Given
+        MiniParkingFunctions.resetParkingLot();
+        
         MiniParkingFunctions.chooseSlot(1);
         MiniParkingFunctions.chooseSlot(2);
         MiniParkingFunctions.chooseSlot(3);
@@ -156,10 +164,10 @@ class MiniParkingFunctionsTest {
 
 
     @Test
-    public void TestThatThereAre20AvailableSpacesWhenParkingLotIsEmpty() {
+    public void testThatThereAre20AvailableSpacesWhenParkingLotIsEmpty() {
 
         //Given
-        // Parking lot starts empty
+        MiniParkingFunctions.resetParkingLot();
 
         //When
         int actualAnswer = MiniParkingFunctions.availableSpaces();
@@ -172,9 +180,11 @@ class MiniParkingFunctionsTest {
 
 
     @Test
-    public void TestThatThereIsOneFilledSpaceAfterParkingOneCar() {
+    public void testThatThereIsOneFilledSpaceAfterParkingOneCar() {
 
         //Given
+        MiniParkingFunctions.resetParkingLot();
+        
         MiniParkingFunctions.chooseSlot(1);
 
         //When
@@ -188,9 +198,11 @@ class MiniParkingFunctionsTest {
 
 
     @Test
-    public void TestThatThereAre19AvailableSpacesAfterParkingOneCar() {
+    public void testThatThereAre19AvailableSpacesAfterParkingOneCar() {
 
         //Given
+        MiniParkingFunctions.resetParkingLot();
+        
         MiniParkingFunctions.chooseSlot(1);
 
         //When
@@ -204,9 +216,11 @@ class MiniParkingFunctionsTest {
 
 
     @Test
-    public void TestThatThereAre20FilledSpacesWhenParkingLotIsFull() {
+    public void testThatThereAre20FilledSpacesWhenParkingLotIsFull() {
 
         //Given
+        MiniParkingFunctions.resetParkingLot();
+        
         for (int index = 1; index <= 20; index++) {
             MiniParkingFunctions.chooseSlot(index);
         }
@@ -222,9 +236,11 @@ class MiniParkingFunctionsTest {
 
 
     @Test
-    public void TestThatParkNextReturnsMinusOneWhenParkingLotIsFull() {
+    public void testThatParkNextReturnsMinusOneWhenParkingLotIsFull() {
 
         //Given
+        MiniParkingFunctions.resetParkingLot();
+        
         for (int index = 1; index <= 20; index++) {
             MiniParkingFunctions.chooseSlot(index);
         }
@@ -240,9 +256,11 @@ class MiniParkingFunctionsTest {
 
 
     @Test
-    public void TestThatSlotZeroIsInvalid() {
+    public void testThatSlotZeroIsInvalid() {
 
         //Given
+        MiniParkingFunctions.resetParkingLot();
+        
         int slot = 0;
 
         //When
@@ -256,9 +274,11 @@ class MiniParkingFunctionsTest {
 
 
     @Test
-    public void TestThatSlot21IsInvalid() {
+    public void testThatSlot21IsInvalid() {
 
         //Given
+        MiniParkingFunctions.resetParkingLot();
+        
         int slot = 21;
 
         //When
